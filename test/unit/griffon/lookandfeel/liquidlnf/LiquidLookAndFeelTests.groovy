@@ -14,25 +14,15 @@
  * limitations under the License.
  */
 
+package griffon.lookandfeel.liquidlnf
+
+import griffon.lookandfeel.AbstractLookAndFeelTestCase
+
 /**
  * @author Andres Almiray
  */
-class LookandfeelLiquidlnfGriffonPlugin {
-    def version = 0.1
-    def griffonVersion = '0.3.2 > *'
-    def dependsOn = [lookandfeel: 0.1]
-    def toolkits = ['swing']
-    def license = 'Apache Software License 2.0'
-
-    def author = 'Andres Almiray'
-    def authorEmail = 'aalmiray@users.sourceforge.net'
-    def title = 'Liquid Swing Look & Feel'
-    def description = '''
-Liquid Swing Look & Feel.
-https://liquidlnf.dev.java.net/
-'''
-
-    // URL to the plugin's documentation
-    def documentation = 'http://griffon.codehaus.org/Lookandfeel+Liquidlnf+Plugin'
+class LiquidLookAndFeelTests extends AbstractLookAndFeelTestCase {
+    void testLiquidLiquidLookAndFeel() {
+        setAndTestLookAndFeel('Liquid', 'Liquid')
+    }
 }
-
